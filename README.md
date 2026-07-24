@@ -18,5 +18,22 @@ The platform automates the complete analytics workflow for a synthetic credit ri
 
 Raw CSV datasets are stored in Amazon S3, where an AWS Glue ETL job processes and transforms the data into optimized Parquet files. AWS Step Functions orchestrates the pipeline by executing the ETL process and automatically triggering a Glue Crawler to update the Data Catalog. Finally, Amazon Athena provides a serverless SQL layer for portfolio analysis, while Power BI consumes the analytical data to build business dashboards and executive KPIs.
 
-## Architecture
+## Solution Architecture
 
+The following diagram illustrates the end-to-end architecture of the platform, from raw data ingestion to business intelligence and analytics.
+
+<img width="442" height="672" alt="diagram_architecture" src="https://github.com/user-attachments/assets/562a52c7-4210-4ba7-ba56-cacec767f333" />
+
+## Technology Stack
+
+| Category             | Technologies                            |
+| -------------------- | --------------------------------------- |
+| Programming Language | Python                                  |
+| Data Processing      | PySpark, AWS Glue                       |
+| Cloud Platform       | Amazon Web Services (AWS)               |
+| Storage              | Amazon S3                               |
+| Orchestration        | AWS Step Functions                      |
+| Metadata Catalog     | AWS Glue Data Catalog, AWS Glue Crawler |
+| Query Engine         | Amazon Athena                           |
+| Data Format          | CSV, Parquet                            |
+| Dashboard            | Power BI                                |
