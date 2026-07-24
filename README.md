@@ -37,3 +37,44 @@ The following diagram illustrates the end-to-end architecture of the platform, f
 | Query Engine         | Amazon Athena                           |
 | Data Format          | CSV, Parquet                            |
 | Dashboard            | Power BI                                |
+
+## Repository Structure
+
+```text
+financial-risk-analytics-platform/
+│
+├── architecture/        # Solution architecture diagrams
+├── athena/              # Business-oriented SQL queries
+├── images/              # Architecture and execution screenshots
+├── sample_data/         # Synthetic datasets used in the project
+├── src/                 # Python scripts (data generation and AWS Glue ETL)
+└── README.md
+```
+
+## Data Pipeline
+
+The platform follows a fully automated data pipeline.
+
+1. Synthetic financial datasets are generated using **Python**.
+2. Raw CSV files are uploaded to **Amazon S3**.
+3. AWS Glue processes the raw data with **PySpark**, applying predefined schemas and **data transformations**.
+4. Processed datasets are stored in **Parquet** format **partitioning** for optimized analytical performance.
+5. **AWS Step Functions** orchestrates the **ETL workflow** by executing the **Glue job** and triggering the **Glue Crawler**.
+6. The **Glue Crawler** updates the **AWS Glue Data Catalog**.
+7. **Amazon Athena** provides a serverless **SQL** layer for portfolio analysis.
+8. **Power BI** connects to the analytical layer to create business dashboards and executive **KPIs**.
+
+## SQL Analytics
+
+Amazon Athena is used as the analytical query engine for the processed datasets. The project includes a set of business-oriented SQL queries that support portfolio monitoring and credit risk analysis.
+
+Implemented analyses include:
+
+| Query                        | Business Purpose                 |
+| ---------------------------- | -------------------------------- |
+| Executive Portfolio Overview | Portfolio KPIs                   |
+| Credit Risk Analysis         | Product-level risk metrics       |
+| Portfolio Composition        | Segment analysis                 |
+| Top Riskiest Loans           | Identify highest expected losses |
+| Collections & Delinquency    | Payment performance              |
+
