@@ -78,3 +78,22 @@ Implemented analyses include:
 | Top Riskiest Loans           | Identify highest expected losses |
 | Collections & Delinquency    | Payment performance              |
 
+## Dashboard
+
+The project includes an interactive Power BI dashboard connected directly to Amazon Athena through the AWS Glue Data Catalog.
+
+The dashboard provides an executive view of the credit portfolio, allowing users to monitor key risk indicators, portfolio composition, payment performance, and the largest credit exposures through interactive filters.
+
+### Dashboard Highlights
+
+- Executive KPIs (Total Loans, Customers, EAD, Expected Loss, Default Rate and Average Interest Rate)
+- Portfolio analysis by product and customer segment
+- Portfolio risk distribution by risk category
+- Payment status analysis
+- Top credit exposures ranked by Expected Loss
+- Interactive filtering by Product, Customer Segment and Loan Status
+
+<img width="1420" height="801" alt="dashboard" src="https://github.com/user-attachments/assets/666bb696-4650-4550-a081-b6bb8d79d0d9" />
+
+
+
