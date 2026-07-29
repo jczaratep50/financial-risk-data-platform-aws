@@ -95,5 +95,22 @@ The dashboard provides an executive view of the credit portfolio, allowing users
 
 <img width="1420" height="801" alt="dashboard" src="https://github.com/user-attachments/assets/666bb696-4650-4550-a081-b6bb8d79d0d9" />
 
+## Business Insights
+
+The analytical layer developed in this project provides several insights into the simulated credit portfolio:
+
+- The portfolio consists of approximately **24.8K active loans** distributed across **8.2K customers**, indicating multiple credit products per customer.
+
+- Corporate loans represent the largest exposure (EAD) within the portfolio, concentrating most of the financial risk.
+
+- Although the overall **Default Rate is only 1.92%**, the portfolio accumulates an **Expected Loss of approximately 845 million**, highlighting the impact of high-value exposures.
+
+- Corporate customers generate the highest Expected Loss among all customer segments, suggesting that exposure concentration has a greater impact on portfolio risk than default frequency alone.
+
+- The portfolio is primarily composed of **Moderate** and **Low** risk loans, while High and Very High risk categories account for only a small proportion of the total portfolio.
+
+- Approximately **90% of all payments are completed successfully**, indicating healthy payment behavior across most borrowers.
+
+
 
 
